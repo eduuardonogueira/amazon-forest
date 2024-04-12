@@ -16,7 +16,7 @@
 
 .problems--title {
   font-family: "Protest Guerrilla", sans-serif;
-  font-size: 7rem;
+  font-size: 6rem;
   line-height: 8rem;
   word-spacing: 1rem;
   font-weight: bold;
@@ -63,13 +63,46 @@
 
 .deforestation--galery {
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
-  height: 500px;
   width: 100%;
+}
+
+.deforestation--medias {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+
+  > :where(iframe, div) {
+    width: 50%;
+  }
 }
 
 .deforestation--galery img {
   object-fit: cover;
   flex-grow: 1;
   width: 33%;
+  height: 300px;
+}
+
+.burning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 1080px;
+  margin: auto;
+  padding: 75px 36px;
+
+  p:first-child {
+    margin-top: 50px;
+  }
+
+  > p {
+    max-width: 800px;
+  }
+
+  > img {
+    width: 800px;
+  }
 }
