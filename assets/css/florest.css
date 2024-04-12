@@ -1,0 +1,106 @@
+.start {
+  height: 100dvh;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding-top: 70px;
+}
+
+.start--title {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-size: 7rem;
+  font-weight: bold;
+  font-style: normal;
+  color: var(--white);
+}
+
+.start--banner {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+.biome,
+.region,
+.rivers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1080px;
+  margin: auto;
+  padding: 150px 36px;
+}
+
+.biome {
+  gap: 75px;
+}
+
+.biome-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 36px;
+}
+
+.biome-content__text {
+  max-width: 550px;
+}
+
+.biome-content__img {
+  width: 40%;
+}
+
+.region {
+  gap: 24px;
+}
+
+.region h2 {
+  margin-bottom: 50px;
+}
+
+.region-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 36px;
+}
+
+.region-content__states {
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-left: 12px;
+}
+
+.region-content__img {
+  width: 40%;
+}
+
+.rivers {
+  gap: 75px;
+}
+
+.rivers-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  width: 33%;
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+th {
+  background-color: #f2f2f2;
+}

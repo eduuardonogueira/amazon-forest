@@ -1,0 +1,75 @@
+@import url(./global.css);
+
+.problems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 75px;
+  max-width: 1080px;
+  height: 100dvh;
+  padding: 70px 36px;
+  margin: auto;
+
+  color: var(--white);
+}
+
+.problems--title {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-size: 7rem;
+  line-height: 8rem;
+  word-spacing: 1rem;
+  font-weight: bold;
+  font-style: normal;
+  color: var(--white);
+  text-align: center;
+}
+
+.problems--text {
+  text-align: center;
+  max-width: 900px;
+}
+
+.problems--filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000000cb;
+  z-index: -1;
+}
+
+.problems--img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.deforestation {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  max-width: 1080px;
+  margin: auto;
+  padding: 75px 36px;
+}
+
+.deforestation--text {
+  margin-top: 50px;
+  max-width: 900px;
+  text-align: justify;
+}
+
+.deforestation--galery {
+  display: flex;
+  gap: 4px;
+  height: 500px;
+  width: 100%;
+}
+
+.deforestation--galery img {
+  object-fit: cover;
+  flex-grow: 1;
+  width: 33%;
+}
