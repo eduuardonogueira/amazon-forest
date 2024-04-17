@@ -6,18 +6,15 @@
   align-items: center;
   justify-content: center;
   gap: 75px;
-  max-width: 1080px;
   height: 100dvh;
   padding: 70px 36px;
   margin: auto;
-
   color: var(--white);
 }
 
 .problems--title {
   font-family: "Protest Guerrilla", sans-serif;
-  font-size: 6rem;
-  line-height: 8rem;
+  font-size: 3rem;
   word-spacing: 1rem;
   font-weight: bold;
   font-style: normal;
@@ -26,7 +23,6 @@
 }
 
 .problems--text {
-  text-align: center;
   max-width: 900px;
 }
 
@@ -41,24 +37,56 @@
 .problems--img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
   position: absolute;
   z-index: -1;
 }
 
-.deforestation {
+.deforestation,
+.burning,
+.gallery,
+.states,
+.help {
   display: flex;
   flex-direction: column;
   gap: 24px;
   align-items: center;
-  max-width: 1080px;
+  max-width: 800px;
   margin: auto;
   padding: 75px 36px;
 }
 
-.deforestation--text {
-  margin-top: 50px;
-  max-width: 900px;
-  text-align: justify;
+.states--img,
+.help--img {
+  width: 100%;
+}
+
+.help--method-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  > li {
+    list-style: decimal;
+    font-size: 1.1rem;
+    line-height: 2.3rem;
+    text-align: justify;
+  }
+}
+
+.help--ong-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  > li {
+    color: var(--green-600);
+    list-style: decimal;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    text-align: justify;
+  }
 }
 
 .deforestation--galery {
@@ -70,11 +98,12 @@
 
 .deforestation--medias {
   display: flex;
+  flex-direction: column;
   gap: 12px;
   width: 100%;
 
   > :where(iframe, div) {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -86,23 +115,33 @@
 }
 
 .burning {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  max-width: 1080px;
-  margin: auto;
-  padding: 75px 36px;
-
   p:first-child {
     margin-top: 50px;
   }
 
-  > p {
-    max-width: 800px;
+  > img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .problems--title {
+    font-size: 6rem;
+    line-height: 7rem;
   }
 
-  > img {
-    width: 800px;
+  .problems--text {
+    text-align: center;
+  }
+
+  .deforestation--medias {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+
+    > :where(iframe, div) {
+      width: 50%;
+    }
   }
 }

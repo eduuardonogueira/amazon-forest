@@ -1,13 +1,24 @@
-.cop30 {
+@import url(./florest.css);
+@import url(./global.css);
+
+.cop30,
+.about {
   display: flex;
   flex-direction: column;
-  padding: 36px;
-  padding-top: 25%;
+  padding: 100px 36px;
   gap: 75px;
   width: 100%;
   max-width: 1080px;
   margin: auto;
   align-items: center;
+}
+
+.about > img {
+  width: 100%;
+}
+
+.start--title {
+  color: var(--black);
 }
 
 .news-wrapper {
@@ -19,23 +30,40 @@
 
 .news {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto, 1fr, auto;
-  gap: 12px;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "image title"
+    "image text"
+    "image link";
+  gap: 24px;
   width: 100%;
-  max-width: 500px;
   padding: 24px;
   border-radius: 7px;
-  background: #e1e1e1;
+  background: var(--gray-100);
   box-sizing: border-box;
+}
+
+.news {
   > h3 {
-    font-size: 1.5rem;
+    font-weight: bold;
+    grid-area: title;
+    font-size: 1.3rem;
     line-height: 2rem;
   }
 
+  > img {
+    grid-area: image;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  > p {
+    grid-area: text;
+  }
+
   > a {
-    align-self: center;
-    justify-self: center;
+    grid-area: link;
   }
 }
 
@@ -66,4 +94,13 @@
   flex-direction: column;
   list-style: inside;
   gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .news > img {
+    grid-area: image;
+    width: 400px;
+    height: 100%;
+    border-radius: 4px;
+  }
 }
